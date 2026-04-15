@@ -44,7 +44,11 @@ async def attack_logic(url, threads, message):
 
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
-    await message.answer("🤖 CHIIP на связи! Используй /dos <url> <потоки> для теста.")
+    await message.answer("🤖 CHIIP на связи! Используй /dos <url> <потоки> для теста. 
+Чтобы тест запустился, нужно писать команду строго в таком виде:
+/dos [URL] [КОЛИЧЕСТВО_ПОТОКОВ]
+Например:
+/dos https://padlet.com/лалалал/ 50")
 
 @dp.message(Command("dos"))
 async def cmd_dos(message: types.Message):
